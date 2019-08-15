@@ -21,7 +21,7 @@ router.get('/on', function(req, res, next) {
       res.render('index', { title: 'Has Turned on~' });
     } else {
       res.writeHead(200, {"Content-Type": "text/plain"});
-      res.write(error);
+      res.write(JSON.stringify(error));
       res.end();
     }
   });
@@ -44,7 +44,7 @@ router.get('/off', function(req, res, next) {
       res.render('index', { title: 'Has Turned off~' });
     } else {
       res.writeHead(200, {"Content-Type": "text/plain"});
-      res.write(error);
+      res.write(JSON.stringify(error));
       res.end();
     }
   });
@@ -66,7 +66,7 @@ router.get('/timer', function(req, res, next) {
       res.render('index', { title: 'Has set timer~' });
     } else {
       res.writeHead(200, {"Content-Type": "text/plain"});
-      res.write(error);
+      res.write(JSON.stringify(error));
       res.end();
     }
   });
